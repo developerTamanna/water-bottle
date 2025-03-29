@@ -28,4 +28,11 @@ const addItemToCartLocalStorage = id=>{
     saveCartToLocalStorage(newCart)
 }
 
-export {getCartFormLocalStorage, addItemToCartLocalStorage}
+
+const removeFromLocalStorage = id =>{
+const storedCart = getCartFormLocalStorage()
+const remainingCart = storedCart.filter(storedId => storedId !==id);
+saveCartToLocalStorage(remainingCart)
+}
+
+export {getCartFormLocalStorage as getStoreCart, addItemToCartLocalStorage as addToStoredCart, removeFromLocalStorage as removeForCart}

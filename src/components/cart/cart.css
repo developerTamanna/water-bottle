@@ -1,0 +1,13 @@
+
+.cart-container{
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+   
+}
+
+.cart-container img{
+  width: 100px;
+  border: 1px solid limegreen;
+  
+}
